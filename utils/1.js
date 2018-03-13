@@ -1,0 +1,25 @@
+let mappingOrder={
+    '//open':'',
+    '//click':'',
+    '//clickAndWait':``,
+    '//assertElementPresent':``,
+    '//storeText':``,
+    '//waitForElementPresent':``,
+    '//waitForCondition':``,
+    '//waitForTitle':``,
+    '//select':``,
+    '//assertText':``,
+    '//assertTitle':``,
+    '//assertNotEval':'',
+    '//selectFrame':``,
+    '//type':``,
+    '//assertElementNotPresent':``,
+    '//clickAt':``,
+    '//typeAndWait':``,
+    '//focus':'',
+    '//sendKeys':'',
+    '//pause':'',
+    '//assertExpression':``,
+    '//verifyText': ``
+
+};

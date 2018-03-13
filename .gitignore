@@ -1,0 +1,7 @@
+node_modules
+allure-*
+.idea/inspectionProfiles/
+.idea/workspace.xml
+npm-debug.log
+/npm-debug.log
+debug.log
