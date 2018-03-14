@@ -194,7 +194,7 @@ const clickByCoordinates = `
  					await driver.executeScript(scrollElementIntoMiddle, element);
         			await driver.sleep(inCommandCooldown);
 		
-					let inputElement = await driver.wait(until.elementLocated(By.xpath(`//*[@data-id="contracts_periodFrom_input"]`)),waitCooldown);
+					let inputElement = await driver.wait(until.elementLocated(By.xath(`//*[@data-id="contracts_periodFrom_input"]`)),waitCooldown);
 					await inputElement.clear();
             		await inputElement.sendKeys(String.raw``);
             		let inputText = await inputElement.getAttribute("value");

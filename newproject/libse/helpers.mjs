@@ -1,7 +1,6 @@
-const chrono = require("chrono-node");
-const assert = require("assert");
+import chrono from "chrono-node";
 
-module.exports = {
+export default {
     scroll_element_into_middle:
     "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
     + "var elementTop = arguments[0].getBoundingClientRect().top;"
