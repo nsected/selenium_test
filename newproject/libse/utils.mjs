@@ -29,7 +29,7 @@ export default class Utils {
         this.retry_command_count = config.retry_command_count;
     }
 
-    static parse_date(date_string) {
+     parse_date(date_string) {
         let clear_date_string = chrono.parse(date_string)[0].text;
         return moment(clear_date_string, 'DD.MM.YYYY').toDate();
     }

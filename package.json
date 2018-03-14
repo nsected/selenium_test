@@ -7,8 +7,9 @@
     "test": "test"
   },
   "scripts": {
+    "install depecies": "npm install && selenium-standalone install",
+    "selenium_server": "selenium-standalone start",
     "test": "node --experimental-modules  newproject/test.mjs",
-    "test:op2017": "node --trace-warnings utils/start test/test_op2017",
     "clear results": "rd allure-results /s /q",
     "report": "allure generate allure-results -o allure-report && allure report open -o allure-report",
     "convert_tests": "node utils/convert.js"

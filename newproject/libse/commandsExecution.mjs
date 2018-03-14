@@ -4,8 +4,8 @@ export default  class CommandsExecution {
 
     catcherror(err, command, target, value,) {
         console.error('\n');
-        console.error('❌ error at step ' + err.step);
-        console.error(err.name);
+        console.error('\t\t\t\t\t❌  error at:' + err.step);
+        console.error('\t\t\t\t\t\terror: ' + err.name);
         console.error('\n');
         console.error('_______________________________________________');
         throw(err)
