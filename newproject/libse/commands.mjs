@@ -49,7 +49,7 @@ export default class Commands {
                     await inputElement.sendKeys(value);
                     let inputText = await inputElement.getAttribute("value");
                     let inputText2 = await inputElement.getText();
-                    await this.assert.ok('' == inputText || '' == inputText2);
+                    await this.assert.ok(value == inputText || value == inputText2);
                     await resolve(inputElement)
                 },
                 'click',
