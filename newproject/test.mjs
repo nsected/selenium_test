@@ -6,7 +6,8 @@ import config from '../configs/config';
 
     await libse.open('/signin');
     await libse.type(libse.By.css('#email'), 'kochetovatest25@yandex.ru');
-    await libse.click(libse.By.css('[type="submit"]'));
+    await libse.click(libse.By.css('[data-id="sign-link""]'));
     await libse.driver.close()
 
 })();
+
