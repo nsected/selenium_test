@@ -1,9 +1,9 @@
-import webdriver from 'selenium-webdriver';
-import chrome from 'selenium-webdriver/chrome';
+const webdriver = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 const options = new chrome.Options();
 options.addArguments('window-size=1920,1045');
 
-export default async function (config) {
+module.exports =  async function (config) {
     return await new webdriver.Builder()
         .forBrowser(config.browser)
         .setAlertBehavior('accept')

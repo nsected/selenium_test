@@ -1,11 +1,11 @@
-import chrono from 'chrono-node';
-import moment from 'moment';
-import helpers from './helpers';
-import masklist from './maskList';
-import selenium from "selenium-webdriver";
-import assert from 'assert';
+const chrono = require('chrono-node') ;
+const moment = require( 'moment');
+const helpers = require( './helpers');
+const masklist = require( './maskList');
+const selenium = require( "selenium-webdriver");
+const assert = require( 'assert');
 
-export default class Utils {
+module.exports =  class Utils {
     constructor(config) {
         this.helpers = helpers;
         this.masklist = masklist;

@@ -1,4 +1,4 @@
-export default class Commands {
+module.exports =  class Commands {
     constructor() {
     }
 

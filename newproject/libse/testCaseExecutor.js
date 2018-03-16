@@ -1,8 +1,8 @@
-import Libse from './libse';
+const Libse = require('./libse');
+const { URL } = require('url');
 
-export default async function testCaseExecutor(testCase, config, done) {
+module.exports =  async function testCaseExecutor(testCase, config, done) {
     let iteration = 1;
-    let errorHandler;
     config.href = new URL(config.url).origin;
 
     console.log('    ▷ test ' + testCase.name + ' started');
@@ -16,11 +16,10 @@ export default async function testCaseExecutor(testCase, config, done) {
         }
     }
 
-    errorHandler = async function (error) {
+    async function errorHandler(error) {
         if (iteration < config.retry_test_count) {
             iteration++;
             console.log('↻ retrying test ' + testCase.name + ' try ' + iteration);
-            console.error('↻ ' + testCase.name + ': ' + error.err.name);
             try {
                 await error.driver.quit();
             } catch (e) {
@@ -44,10 +43,10 @@ export default async function testCaseExecutor(testCase, config, done) {
                     "base64"
                 )
             } catch (e) {
-                url = await error.driver.getCurrentUrl();
+                return true
             }
             try {
-                await error.driver.quit();
+                url = await error.driver.getCurrentUrl();
             } catch (e) {
                 return true
             }
@@ -72,10 +71,9 @@ export default async function testCaseExecutor(testCase, config, done) {
                 screenShot
             );
 
-
-            done(error.err);
+            done(error);
 
         }
-    };
+    }
     await test();
-}
+};

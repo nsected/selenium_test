@@ -1,11 +1,9 @@
-// import testSuitInit from './testSuitInit';
-let Mocha = require('mocha');
-console.log(1)
-console.log(process.argv);
-// module.exports = function mochaInit(testSuit, config) {
-    console.log(2)
-    // global.env.libse.config = config;
-    // global.env.libse.testSuit = testSuit;
+const Mocha = require('mocha');
+module.exports = function mochaInit(testSuit, config) {
+    global.libse = {
+        testSuit: testSuit,
+        config: config
+    };
 
     let reporterOptions = {
         "mocha-allure-reporter": "-",
@@ -18,10 +16,9 @@ console.log(process.argv);
         timeout: 1200000
     });
 
-    mocha.addFile('./testSuitInit.mjs');
-    console.log(1);
+    mocha.addFile('./newproject/libse/testSuitInit.js');
 
     mocha.run(function onRun(failures) {
         console.log(failures);
     });
-// };
+};

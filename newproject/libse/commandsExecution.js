@@ -1,20 +1,20 @@
-export default  class CommandsExecution {
+module.exports =   class CommandsExecution {
     constructor() {
     }
 
     catcherror(err, command, target, value,) {
-        console.error('\n');
-        console.error('\t\t\t\t\t❌  error at:' + err.step);
-        console.error('\t\t\t\t\t\terror: ' + err.name);
-        console.error('\n');
-        console.error('_______________________________________________');
+        // console.log('\n');
+        // console.log('\t\t\t\t\t❌  error at:' + err.step);
+        // console.log('\t\t\t\t\t\terror: ' + err.name);
+        // console.log('\n');
+        // console.log('_______________________________________________');
         throw(err)
     }
 
       executeCommand(commands, commandName, target, value, reject ) {
-
-          ( async () => {
-            let _this = this;
+          let _this = this;
+          command();
+          async function command() {
             let stepFunction = async function (lastIteration) {
                 let iteration = lastIteration | 0;
                 let step;
@@ -45,7 +45,6 @@ export default  class CommandsExecution {
                 }
             };
             await stepFunction();
-        })()
-
+        }
     }
 };

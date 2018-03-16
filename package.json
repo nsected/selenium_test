@@ -9,7 +9,7 @@
   "scripts": {
     "install depecies": "npm install && selenium-standalone install",
     "selenium_server": "selenium-standalone start",
-    "test_suit_example": "node --experimental-modules  newproject/test_suit_example.mjs",
+    "test_suit_example": "node --harmony  newproject/test_suit_example.js",
     "clear results": "rd allure-results /s /q",
     "report": "allure generate allure-results -o allure-report && allure report open -o allure-report",
     "convert_tests": "node utils/convert.js"

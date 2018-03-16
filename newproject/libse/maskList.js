@@ -1,4 +1,4 @@
-export default {
+module.exports =  {
 any_word: /[A-z]|[А-я]/g,
 okved: /^[\d.]+$/g,
 okpd: /^[\d.]+$/g,

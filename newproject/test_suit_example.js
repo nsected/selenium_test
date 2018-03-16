@@ -1,7 +1,7 @@
-import mochaInit from './libse/mochaInit';
-import config from '../configs/config';
+const mochaInit = require('./libse/mochaInit');
+const config = require('../configs/config');
 
-import test_case_example from './test_case_example';
+const test_case_example = require('./test_case_example');
 
 let testSuit = {
     name: 'example suit',

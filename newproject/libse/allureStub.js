@@ -1,4 +1,4 @@
-export default
+module.exports =
     function () {
         if (global.allure === undefined) {
             global.allure = {};
