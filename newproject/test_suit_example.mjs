@@ -1,5 +1,5 @@
-import mochaInitTestSuit from './libse/mochaInitTestSuit';
-
+import mochaInit from './libse/mochaInit';
+import config from '../configs/config';
 
 import test_case_example from './test_case_example';
 
@@ -10,4 +10,4 @@ let testSuit = {
     ]
 };
 
-mochaInitTestSuit(testSuit);
+mochaInit(testSuit,config);
