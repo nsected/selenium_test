@@ -4,7 +4,7 @@ module.exports =  class Commands {
 
     async open(target, value) {
         return new Promise(async (resolve, reject) => {
-            await console.log('open');
+            await console.log('     open');
                 await this.executeCommand(
                     async () => {
                         let elem = await this.driver.get(this.config.url + target);
@@ -23,7 +23,7 @@ module.exports =  class Commands {
 
     async click(target, value) {
         return new Promise(async (resolve, reject) => {
-            await console.log('click');
+            await console.log('     click');
             await this.executeCommand(
                 async () => {
                     let elem = await this.driver.wait(this.until.elementLocated(target), this.waitCooldown).click();
@@ -41,7 +41,7 @@ module.exports =  class Commands {
 
     async type(target, value) {
         return new Promise(async (resolve, reject) => {
-            await console.log('type');
+            await console.log('     type');
             await this.executeCommand(
                 async () => {
                     let inputElement = await this.driver.wait(this.until.elementLocated(target), this.waitCooldown);

@@ -3,7 +3,7 @@ module.exports =  async function test_suit_example(config, done, Libse){
 
     await libse.open('/signin');
     await libse.type(libse.By.css('#email'), 'kochetovatest25@yandex.ru');
-    await libse.click(libse.By.css('[type="sssubmit"]'));
+    await libse.click(libse.By.css('[type="submit"]'));
     await libse.driver.close()
 
 };
