@@ -1,7 +1,4 @@
-import Libse from './libse/libse';
-import config from '../configs/config';
-
-(async function test(){
+export default async function test_suit_example(config, done, Libse){
     let libse = await new Libse(config);
 
     await libse.open('/signin');
@@ -9,5 +6,5 @@ import config from '../configs/config';
     await libse.click(libse.By.css('[data-id="sign-link""]'));
     await libse.driver.close()
 
-})();
+};
 
