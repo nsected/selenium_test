@@ -12,11 +12,9 @@ module.exports =  class Commands {
                     },
                     'open',
                     target,
-                    value,
+                    '-',
                     reject
                 );
-        }).catch((err)=>{
-            this.catcherror(err, 'click', target, value,)
         })
 
     }
@@ -31,7 +29,7 @@ module.exports =  class Commands {
                 },
                 'click',
                 target,
-                value,
+                '-',
                 reject
             );
         }).catch((err)=>{
@@ -52,7 +50,7 @@ module.exports =  class Commands {
                     await this.assert.ok(value == inputText || value == inputText2);
                     await resolve(inputElement)
                 },
-                'click',
+                'type',
                 target,
                 value,
                 reject

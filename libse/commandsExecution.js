@@ -40,7 +40,7 @@ module.exports =   class CommandsExecution {
                     } else {
                         err.step = step;
                         err.driver = _this.driver;
-                        reject(err)
+                        reject(err);
                     }
                 }
             };

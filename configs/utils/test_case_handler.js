@@ -1,25 +1,25 @@
 const {URL} = require('url');
-if (global.allure === undefined) {
-    global.allure = {};
-    global.allure.createAttachment = _ => {
-        return _ => {
-        }
-    };
-    global.allure.description = _ => {
-        return _ => {
-        }
-    };
-    global.allure.createStep = function (step, callback) {
-        return _ => {
-            callback()
-        }
-    };
-}
+// if (global.allure === undefined) {
+//     global.allure = {};
+//     global.allure.createAttachment = _ => {
+//         return _ => {
+//         }
+//     };
+//     global.allure.description = _ => {
+//         return _ => {
+//         }
+//     };
+//     global.allure.createStep = function (step, callback) {
+//         return _ => {
+//             callback()
+//         }
+//     };
+// }
 
 module.exports =
     function test_case(test_case, done, test_prep_file) {
         let iteration = 1;
-        let config = require('../configs/config');
+        let config = require('../default_config');
         let handleDriver;
         let error_handler;
         let errorProcess;
@@ -97,7 +97,7 @@ module.exports =
                 }
                 test();
             } else {
-                console.error('❎ ' + test_case + ' fail');
+                console.error(' ❌ ' + test_case + ' fail');
                 console.error('at step ' + error.step);
                 console.error('url: ' + error.url);
                 // process.exit(1);

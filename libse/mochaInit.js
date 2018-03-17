@@ -5,20 +5,15 @@ module.exports = function mochaInit(testSuit, config) {
         config: config
     };
 
-    let reporterOptions = {
-        "mocha-allure-reporter": "-",
-        spec: "-"
-    };
-
     let mocha = new Mocha({
         reporter: "mocha-multi",
-        reporterOptions: reporterOptions,
-        timeout: 1200000
+        reporterOptions: config.reporter_options,
+        timeout: config.mocha_timeout
     });
     mocha.fullTrace();
-    mocha.addFile('./newproject/libse/testSuitInit.js');
+    mocha.addFile(__dirname+'/testSuitInit.js');
 
     mocha.run(function onRun(failures) {
-        console.log(failures);
+        console.error(failures);
     });
 };

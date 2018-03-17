@@ -9,8 +9,8 @@
   "scripts": {
     "install depecies": "npm install && selenium-standalone install",
     "selenium_server": "selenium-standalone start",
-    "test_suit_example": "node --harmony  newproject/test_suit_example.js",
-    "clear results": "rd allure-results /s /q",
+    "▷ test_suit_example": "npm run clear_results && node --trace-warnings --harmony  tests/test_suits/test_suit_example.js && npm run report",
+    "clear_results": "rimraf allure-results ",
     "report": "allure generate allure-results -o allure-report && allure report open -o allure-report",
     "convert_tests": "node utils/convert.js"
   },
@@ -25,6 +25,7 @@
     "moment": "^2.19.3",
     "mongoose": "^4.13.1",
     "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.2",
     "selenium-standalone": "^6.13.0",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "xml2js": "^0.4.19"

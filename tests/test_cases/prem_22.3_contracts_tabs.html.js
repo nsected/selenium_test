@@ -1,7 +1,7 @@
 
 module.exports = async function (config, test_prep_file) {
-    const helpers = require('../utils/helpers');
-    const mask_list = require('../utils/mask_list');
+    const helpers = require('../../configs/utils/helpers');
+    const mask_list = require('../../configs/utils/mask_list');
     const webdriver = require('selenium-webdriver');
     const By = require('selenium-webdriver').By;
     const until = require('selenium-webdriver').until;
