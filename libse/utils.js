@@ -24,6 +24,7 @@ module.exports =  class Utils {
         this.inCommandCooldown = config.inCommandCooldown;
         this.retryCommandCooldown = config.retryCommandCooldown;
         this.waitCooldown = config.waitCooldown;
+        this.antiStaleCooldown = config.antiStaleCooldown;
 
         this.baseUrl = config.href;
         this.retry_command_count = config.retry_command_count;

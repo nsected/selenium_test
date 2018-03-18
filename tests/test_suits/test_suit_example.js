@@ -5,16 +5,10 @@ let testSuit = {
     name: 'example suit',
     cases: [
         {
-            name: 'этот тест состоит из нескольких частей',
+            name: 'тест демо мерчанта из нескольких частей',
             scripts: [
-                require('../test_cases/test_case_example_0'),
-                require('../test_cases/test_case_example_1'),
-            ]
-        },
-        {
-            name: 'this should fail',
-            scripts: [
-                require('../test_cases/test_case_example_fail')
+                require('../test_preparations/test_case_example_login'),
+                require('../test_cases/test_case_example_pass'),
             ]
         }
     ]

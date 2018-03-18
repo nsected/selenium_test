@@ -7,6 +7,7 @@ module.exports = async function testCaseExecutor(testCase, config, done) {
         allure.createStep(' ❌ error: '+ error.name, () => {})();
         throw error;
     });
+    let libse;
     let iteration = 1;
     config.href = new URL(config.url).origin;
 
@@ -14,7 +15,7 @@ module.exports = async function testCaseExecutor(testCase, config, done) {
 
     async function test() {
         try {
-            let libse = await new Libse(config);
+            libse = await new Libse(config);
 
             for (let script of testCase.scripts) {
                 await script(config, done, libse);
@@ -33,7 +34,7 @@ module.exports = async function testCaseExecutor(testCase, config, done) {
             iteration++;
             console.log('↻ retrying test ' + testCase.name + ' try ' + iteration);
             try {
-                await error.driver.quit();
+                await libse.driver.quit();
             } catch (e) {
                 return true
             }
@@ -50,14 +51,14 @@ module.exports = async function testCaseExecutor(testCase, config, done) {
 
 
             try {
-                error.driver.getCurrentUrl()
+                libse.driver.getCurrentUrl()
                     .then(_url => {
                         url = _url;
-                        return error.driver.takeScreenshot()
+                        return libse.driver.takeScreenshot()
                     })
                     .then(_driverScreenData => {
                         driverScreenData = _driverScreenData;
-                        return error.driver.quit()
+                        return libse.driver.quit()
                     })
                     .then(driver=>{
                         returnErrorToMocha(error);

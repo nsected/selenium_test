@@ -1,8 +1,9 @@
 module.exports =  {
-    url: 'https://publisher.xsolla.com',
+    url: 'https://demo-publisher.xsolla.com',
     webdriver_server_url: 'http://localhost:4444/wd/hub/',
     cooldown: 0,
     inCommandCooldown: 0,
+    antiStaleCooldown: 500,
     retryCommandCooldown: 500,
     waitCooldown: 12000,
     retry_test_count: 1,

@@ -9,7 +9,8 @@
   "scripts": {
     "install depecies": "npm install && selenium-standalone install",
     "selenium_server": "selenium-standalone start",
-    "▷ test_suit_example": "npm run clear_results && node --trace-warnings --harmony  tests/test_suits/test_suit_example.js && npm run report",
+    "▷ test_demo_publisher": "npm run clear_results && node --trace-warnings --harmony  tests/test_suits/test_suit_example.js",
+    "▷ test_demo_fails": "npm run clear_results && node --trace-warnings --harmony  tests/test_suits/test_suit_fails.js",
     "clear_results": "rimraf allure-results ",
     "report": "allure generate allure-results -o allure-report && allure report open -o allure-report",
     "convert_tests": "node utils/convert.js"
