@@ -15,7 +15,9 @@ module.exports =  {
     browser: 'chrome',
     options: {
         chrome: [
-            'window-size=1920,1045'
+            'window-size=1920,1045',
+            // 'headless',
+            // 'disable-gpu',
         ]
     }
 };
