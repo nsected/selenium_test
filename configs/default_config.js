@@ -6,8 +6,8 @@ module.exports =  {
     antiStaleCooldown: 500,
     retryCommandCooldown: 500,
     waitCooldown: 12000,
-    retry_test_count: 1,
-    retry_command_count: 1,
+    retry_test_count: 2,
+    retry_command_count: 2,
     reporter_options: {
         "mocha-allure-reporter": "-",
         spec: "-"
