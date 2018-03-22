@@ -4,11 +4,6 @@ module.exports =   class CommandsExecution {
     }
 
     catcherror(err, command, target, value,) {
-        // console.log('\n');
-        // console.log('\t\t\t\t\t❌  error at:' + err.step);
-        // console.log('\t\t\t\t\t\terror: ' + err.name);
-        // console.log('\n');
-        // console.log('_______________________________________________');
         throw(err)
     }
 
