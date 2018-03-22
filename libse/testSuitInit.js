@@ -1,3 +1,7 @@
+//Инициализатор тест-сьюта. Создает в mocha и allure новый тест-сьют,
+//добавляет информацию об окружении, имена кейсов и имя тест-сьюта,
+//запускает выполнение тест-кейса
+
 const testCaseExecutor = require('./testCaseExecutor');
 const os = require('os');
 const testSuit = global.libse.testSuit;

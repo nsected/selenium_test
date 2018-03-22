@@ -1,3 +1,5 @@
+//класс-инициализатор тестовых утилит и конфигов для тестовой библиотеки
+
 const chrono = require('chrono-node') ;
 const moment = require( 'moment');
 const helpers = require( './helpers');

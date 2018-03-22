@@ -1,3 +1,5 @@
+//Главный файл тестовой библиотеки. Инициализирует новый объект библиотеки.
+
 'use strict';
 const CommandsExecution = require( './commandsExecution');
 const aggregation = require( "aggregation/es6");

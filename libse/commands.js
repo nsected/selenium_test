@@ -1,3 +1,4 @@
+//кастомные команды для тестов, в дополнение к selenium командам
 module.exports =  class Commands {
     constructor() {
     }

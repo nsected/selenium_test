@@ -1,3 +1,5 @@
+//Вспомогательные функции для тестов
+
 const chrono = require("chrono-node") ;
 
 module.exports = {

@@ -1,3 +1,5 @@
+//запуск тест-сьюта в Mocha
+
 const Mocha = require('mocha');
 module.exports = function mochaInit(testSuit, config) {
     global.libse = {

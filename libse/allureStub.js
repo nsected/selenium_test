@@ -1,3 +1,4 @@
+//заглушка для запуска без Allure
 module.exports =
     function () {
         if (global.allure === undefined) {
