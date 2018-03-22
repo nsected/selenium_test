@@ -3,5 +3,5 @@
 * libse - библиотека с функционалом тестового проекта
 * tests/test_suits - тестовые наборы
 * tests/test_cases - тестовые сценарии
-* tests/test_preparations - файлы подготовки для тестовых сценариев
+* tests/test_preparations - сценарии подготовки для основных сценариев
 * configs - конфиги
