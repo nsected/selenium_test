@@ -16,7 +16,9 @@ module.exports =  class Libse extends aggregation(Utils, Commands, CommandsExecu
         allureStub();
 
         return new Promise(async (resolve, reject) => {
-            this.driver = await webdriverBuilder(config);
+            this.driver = await webdriverBuilder(config).catch(error=>{
+                reject(error)
+            });
             await resolve(this)
         })
     }

@@ -8,39 +8,37 @@ module.exports =   class CommandsExecution {
     }
 
       executeCommand(commands, commandName, target, value, reject ) {
-          let _this = this;
-          command();
-          async function command() {
-            let stepFunction = async function (lastIteration) {
+          const command = async () => {
+            const stepFunction = async  (lastIteration) => {
                 let iteration = lastIteration | 0;
                 let step;
                 try {
                     iteration++;
-                    await _this.driver.sleep(_this.cooldown);
-                    await _this.driver.sleep(0).then(() => {
+                    await this.driver.sleep(this.cooldown);
+                    await this.driver.sleep(0).then(() => {
                         step = `
 						command: ${commandName}
 						target: ${target}
 						value: ${value}`;
-                        allure.createStep(step, () => {
-                        })();
+                        allure.createStep(step, () => {})();
                     });
 
                     await commands();
 
                 } catch (err) {
-                    if (iteration < _this.retry_command_count) {
-                        await _this.driver.sleep(_this.retryCommandCooldown);
+                    if (iteration < this.retry_command_count) {
+                        await this.driver.sleep(this.retryCommandCooldown);
                         console.log('↻' + step);
                         await stepFunction(iteration)
                     } else {
                         err.step = step;
-                        err.driver = _this.driver;
+                        err.driver = this.driver;
                         reject(err);
                     }
                 }
             };
             await stepFunction();
-        }
+        };
+          command();
     }
 };
