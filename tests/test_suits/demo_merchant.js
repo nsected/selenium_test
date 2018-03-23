@@ -12,20 +12,20 @@ let testSuit = {
             require('../test_preparations/test_case_example_login'),
             require('../test_cases/analytics'),
         ]},
-        {name: 'analytics',
+        {name: 'antifraud',
             scripts: [
                 require('../test_preparations/test_case_example_login'),
-                require('../test_cases/analytics'),
+                require('../test_cases/antifraud'),
             ]},
-        {name: 'analytics',
+        {name: 'boxnet',
             scripts: [
                 require('../test_preparations/test_case_example_login'),
-                require('../test_cases/analytics'),
+                require('../test_cases/boxnet'),
             ]},
-        {name: 'analytics',
+        {name: 'dashboard',
             scripts: [
                 require('../test_preparations/test_case_example_login'),
-                require('../test_cases/analytics'),
+                require('../test_cases/dashboard'),
             ]},
         {name: 'payment_systems',
             scripts: [
