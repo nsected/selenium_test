@@ -3,16 +3,16 @@ module.exports =  {
     webdriver_server_url: 'http://localhost:4444/wd/hub/',
     cooldown: 0,
     inCommandCooldown: 0,
-    antiStaleCooldown: 500,
+    antiStaleCooldown: 0,
     retryCommandCooldown: 500,
-    waitCooldown: 12000,
+    waitCooldown: 30000,
     retry_test_count: 2,
-    retry_command_count: 2,
+    retry_command_count: 3,
     reporter_options: {
         "mocha-allure-reporter": "-",
         spec: "-"
     },
-    mocha_timeout: 1200000,
+    mocha_timeout: 120000,
     browser: 'chrome',
     options: {
         chrome: [

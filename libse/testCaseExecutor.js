@@ -6,6 +6,7 @@ const {URL} = require('url');
 module.exports = async function testCaseExecutor(testCase, config, done) {
     process.on('unhandledRejection', (error) => {
         console.log('unhandledRejection');
+        console.error(error);
         allure.createStep(' ❌ error: '+ error.name, () => {})();
         throw error;
     });
@@ -26,7 +27,8 @@ module.exports = async function testCaseExecutor(testCase, config, done) {
             await libse.driver.close();
             await done()
         } catch (error) {
-            console.log(error.step);
+            console.error('test case error');
+            console.error(error);
             errorHandler(error)
         }
     }

@@ -153,6 +153,9 @@ module.exports =  class Commands {
                     let inputElement = await this.driver.wait(this.until.elementLocated(target), this.waitCooldown);
                     let elementValue = await inputElement.getAttribute("value");
                     let elementText = await inputElement.getText();
+                    // console.log(value);
+                    // console.log(elementValue);
+                    console.log(elementText);
                     await this.driver.executeScript(this.scrollElementIntoMiddle, inputElement);
                     await this.assert.ok(elementValue == value || elementText == value);
                     await resolve(inputElement)
@@ -176,6 +179,9 @@ module.exports =  class Commands {
                     let inputElement = await this.driver.wait(this.until.elementLocated(target), this.waitCooldown);
                     let elementValue = await inputElement.getAttribute("value");
                     let elementText = await inputElement.getText();
+                    // await console.log(value);
+                    // await console.log(elementValue);
+                    await console.log(elementText);
                     await this.driver.executeScript(this.scrollElementIntoMiddle, inputElement);
                     await this.assert.ok(new RegExp(value).test(elementValue) || new RegExp(value).test(elementText));
                     await resolve(inputElement)
