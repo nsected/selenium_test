@@ -34,6 +34,6 @@ module.exports =  class Utils {
 
      parse_date(date_string) {
         let clear_date_string = chrono.parse(date_string)[0].text;
-        return moment(clear_date_string, 'DD.MM.YYYY').toDate();
+        return new Date(clear_date_string);
     }
 };

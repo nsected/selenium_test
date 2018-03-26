@@ -3,6 +3,6 @@ module.exports =  async function test_suit_example(config, done, libse){
     allure.createStep('Documents', () => {})();
 
     await libse.open('/1/boxnet');
-    await libse.verifyText(by.css('h4'), libse.masklist.cyrillic_symbol)
+    await libse.verifyText(by.css('h4'), libse.masklist.any_word)
 
 };

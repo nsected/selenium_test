@@ -3,6 +3,6 @@ module.exports =  async function test_suit_example(config, done, libse){
     allure.createStep('Promotions', () => {})();
 
     await libse.open('/1/promotions');
-    await libse.verifyText(by.css('.described-time-value'), libse.masklist.any_date)
-
+    let elemDate = await libse.getDate(by.css('.described-time-value'));
+    await libse.assert.ok(elemDate instanceof Date);
 };

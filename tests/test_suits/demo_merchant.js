@@ -37,16 +37,18 @@ let testSuit = {
                 require('../test_preparations/test_case_example_login'),
                 require('../test_cases/projects'),
             ]},
-        {name: 'promotions',
-            scripts: [
-                require('../test_preparations/test_case_example_login'),
-                require('../test_cases/promotions'),
-            ]},
         {name: 'transactions',
             scripts: [
                 require('../test_preparations/test_case_example_login'),
                 require('../test_cases/transactions'),
             ]},
+
+        {name: 'promotions',
+            scripts: [
+                require('../test_preparations/test_case_example_login'),
+                require('../test_cases/promotions'),
+            ]},
+
     ]
 };
 mochaInit(testSuit, config);

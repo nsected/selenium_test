@@ -222,6 +222,49 @@ module.exports =  class Commands {
         })
     }
 
+    async getElement(target) {
+        return new Promise(async (resolve, reject) => {
+            await console.log('     verifyText');
+            await this.executeCommand(
+                async () => {
+                    await this.driver.wait(this.until.elementLocated(target), this.waitCooldown);
+                    let inputElement = await this.driver.wait(this.until.elementLocated(target), this.waitCooldown);
+                    let elementValue = await inputElement.getAttribute("value");
+                    let elementText = await inputElement.getText();
+                    inputElement.elementValue = elementValue;
+                    inputElement.elementText = elementText;
+                    await resolve(inputElement)
+                },
+                'verifyText',
+                target,
+                reject
+            );
+        }).catch((err)=>{
+            this.catcherror(err, 'verifyText', target,)
+        })
+    }
+
+    async getDate(target) {
+        return new Promise(async (resolve, reject) => {
+            await console.log('     verifyText');
+            await this.executeCommand(
+                async () => {
+                    await this.driver.wait(this.until.elementLocated(target), this.waitCooldown);
+                    let inputElement = await this.driver.wait(this.until.elementLocated(target), this.waitCooldown);
+                    let elementValue = await inputElement.getAttribute("value");
+                    let elementText = await inputElement.getText();
+                    let elementDate = await this.parse_date(elementText || elementValue);
+                    await resolve(elementDate)
+                },
+                'verifyText',
+                target,
+                reject
+            );
+        }).catch((err)=>{
+            this.catcherror(err, 'verifyText', target,)
+        })
+    }
+
 
 
 };
