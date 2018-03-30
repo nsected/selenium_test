@@ -27,8 +27,8 @@ module.exports = async function testCaseExecutor(testCase, config, done) {
             await libse.driver.close();
             await done()
         } catch (error) {
-            console.error('test case error');
-            console.error(error);
+            console.log('test case error');
+            console.log(error);
             errorHandler(error)
         }
     }

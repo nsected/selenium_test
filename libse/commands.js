@@ -102,7 +102,7 @@ module.exports =  class Commands {
                 reject
             );
         }).catch((err)=>{
-            this.catcherror(err, 'waitForPresent', target, value,)
+            this.catcherror(err, 'waitForPresent', target, '',)
         })
     }
 
